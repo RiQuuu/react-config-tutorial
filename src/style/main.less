@@ -1,10 +1,10 @@
-@import "header.less";
+@import "form.less";
 
-@color:		#f5adad;
+@color:		#666;
 @phone-up:	~'(min-width: 576px)';
 
 body {
-	background-color: @color;
+	background-color: #fff;
 }
 
 *, ::after, ::before {
@@ -42,13 +42,15 @@ body {
 	flex-direction: column;
 	min-width: 0;
 	word-wrap: break-word;
-	background-color: #000;
+	background-color: transparent;
 	background-clip: border-box;
-	border: 1px solid rgba(0,0,0,.125);
+	border: 1px solid @color;
 	border-radius: .25rem;
+	height: 100%;
 
 	.card-img-top {
-		width: 100%;
+		width: auto;
+		height: 150px;
 		border-top-left-radius: calc(.25rem - 1px);
 		border-top-right-radius: calc(.25rem - 1px);
 	}
@@ -57,7 +59,7 @@ body {
 		-ms-flex: 1 1 auto;
 		flex: 1 1 auto;
 		padding: 1.25rem;
-		color: #fff;
+		color: @color;
 
 		.card-title {
 			margin-bottom: .75rem;
@@ -75,7 +77,8 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	border: 1px solid transparent;
+	text-decoration: none;
+	border: 1px solid @color;
 	padding: .375rem .75rem;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -87,8 +90,8 @@ body {
 	}
 
 	&-primary {
-		color: #000;
-		background-color: #fff;
-		border-color: #fff;
+		color: #fff;
+		background-color: @color;
+		border-color: @color;
 	}
 }
